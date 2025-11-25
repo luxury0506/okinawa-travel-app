@@ -199,3 +199,41 @@ h3 {
   font-size: 14px;
   line-height: 1.5em;
 }
+
+<style>
+.tabs {
+  margin-top: 15px;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  display: inline-block;
+  padding: 10px 14px;
+  margin-right: 4px;
+  background: #eee;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs input:checked + label {
+  background: #d35400;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 6px 6px 6px;
+}
+
+#tabA:checked ~ #contentA,
+#tabB:checked ~ #contentB {
+  display: block;
+}
+</style>
