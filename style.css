@@ -1,0 +1,166 @@
+/* ============================
+   Global base
+============================ */
+:root{
+  --primary:#8E8D89;     /* 莫蘭迪灰褐 */
+  --primary-dark:#6F6D69;
+  --accent:#BFAF9B;      /* 柔和卡其 */
+  --highlight:#C28C66;   /* 暖橘重點色 */
+  --background:#F4F3F2;  /* 奶油灰白 */
+  --text:#333333;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* ============================
+   Page layout
+============================ */
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+/* ============================
+   Header
+============================ */
+.header {
+  text-align: center;
+  padding: 18px;
+  background: var(--primary-dark);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ============================
+   Headings
+============================ */
+h2 {
+  color: var(--primary-dark);
+  margin-top: 22px;
+  font-size: 20px;
+}
+
+h3 {
+  color: var(--primary);
+  margin-top: 14px;
+  font-size: 18px;
+}
+
+/* ============================
+   Navigation (index.html)
+============================ */
+.nav {
+  display: flex;
+}
+.nav button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+}
+.nav button.active {
+  background: var(--primary-dark);
+}
+
+/* ============================
+   Carousel
+============================ */
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.carousel img {
+  width: 90%;
+  height: 240px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 12px;
+  scroll-snap-align: center;
+}
+
+/* ============================
+   Buttons
+============================ */
+.map-btn {
+  display: inline-block;
+  background: var(--highlight);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.map-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* ============================
+   Info boxes
+============================ */
+.history {
+  font-size: 14px;
+  color: #555;
+  background: #fafafa;
+  padding: 10px;
+  border-left: 4px solid var(--primary);
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.rain, .backup {
+  background: #f0eee9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+/* ============================
+   Souvenir Box
+============================ */
+.souvenir-box {
+  background: #f8f4ef;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border-left: 4px solid var(--highlight);
+}
+
+/* ============================
+   Pages visibility (index nav mode)
+============================ */
+.page {
+  display: none;
+  padding: 20px;
+}
+
+/* ============================
+   Mobile optimization
+============================ */
+@media (max-width: 420px){
+  .carousel img {
+    height: 200px;
+  }
+  .header {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
